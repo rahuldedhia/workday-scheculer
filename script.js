@@ -38,9 +38,11 @@ $(document).ready(function () {
     
     if (localStorage.getItem("day") === moment().format("MM/DD/YYYY")) {
         dayTimeText.val(tempText);
+        console.log("inside if loop");
     }
     else {
         localStorage.removeItem("#text_area" + i);
+        console.log("inside else loop");
     }
 
     dayTimeText.val(tempText);
