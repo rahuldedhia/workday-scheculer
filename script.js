@@ -45,9 +45,8 @@ $(document).ready(function () {
 
     dayTimeText.val(tempText);
 
-    //for rendering the save buttons
-    dayTimeBtn.addClass("saveBtn col-sm-1");
-    dayTimeBtn.append("<img src=./assets/save-btn.png />");
+    //for rendering the save buttons using Google Font Awesome (fa)
+    dayTimeBtn.addClass("saveBtn col-sm-1 fas fa-save");
     dayTimeBtn.attr("value", "area" + i);
 
     //Putting all HTML components together
