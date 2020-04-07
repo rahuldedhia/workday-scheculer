@@ -2,8 +2,6 @@ var currentTime = moment().format("h a");
 var dispTime = moment("8 am", "h a").format("h a");
 var calValue;
 
-localStorage.setItem("day", moment().format("MM/DD/YYYY"));
-
 //Main Function to render the HTML
 $(document).ready(function () {
   $("#currentDay").append(moment().format("dddd, MM/DD/YYYY, h:mm A"));
@@ -38,11 +36,9 @@ $(document).ready(function () {
     
     if (localStorage.getItem("day") === moment().format("MM/DD/YYYY")) {
         dayTimeText.val(tempText);
-        console.log("inside if loop");
     }
     else {
         localStorage.removeItem("#text_area" + i);
-        console.log("inside else loop");
     }
 
     dayTimeText.val(tempText);
@@ -63,5 +59,6 @@ $(document).ready(function () {
     calValue = $(this).val();
     var text = $("#text_" + calValue).val();
     localStorage.setItem("#text_" + calValue, text);
+    localStorage.setItem("day", moment().format("MM/DD/YYYY"));
   });
 });
